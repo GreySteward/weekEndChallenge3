@@ -1,12 +1,26 @@
+body {
+    display: block;
+    padding: 40px;
+    border: 10px;
+    margin: 8px;
+    height: 300px;
+    width: 300px;
+}
 
+#input1 {
+    width: 25px;
+}
+#input2 {
+    width: 25px;
+}
 #post-zero {
     margin-left: 25px;
 }
-#equals {
-    margin-left:25px;
+#equals {height
+    margin-left: 35px;
 }
 #operators {
-    margin-left: 75px
+    margin-left: 25px;
 }
 #clear {
     margin-left:75px;
