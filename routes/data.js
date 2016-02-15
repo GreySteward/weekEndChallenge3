@@ -20,7 +20,7 @@ var multi = function(x,y){
     return number;
 };
 
-var division = function(x,y) {
+var div = function(x,y) {
     var number = x / y;
     number = number.toString();
 };
@@ -32,9 +32,27 @@ router.get('/', function(req, res) {
     res.send({message: 'hello'});
 });
 
-router.post('/', function(req, res) {
+router.post('/sum', function(req, res) {
+    console.log(req.body.input1);
+    var equals = sum (req.body.input1,req.body.input2)
+    res.send(equals);
+});
+
+router.post('/diff', function(req, res) {
+    console.log(req.body.input1);
+    var equals = diff (req.body.input1,req.body.input2)
+    res.send(equals);
+});
+
+router.post('/multi', function(req, res) {
+    var equals = multi (req.body.input1,req.body.input2)
+    res.send(equals);
+});
+
+router.post('/div', function(req, res) {
     console.log(req.body);
-    res.send(req.body);
+    var equals = div (req.body.input1,req.body.input2)
+    res.send(equals);
 });
 
 module.exports = router;
